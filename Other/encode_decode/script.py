@@ -14,7 +14,6 @@ def start():
 
 
 def decode_string(given_string):
-    worthless_value = ''                                                                    # Used to pass the try exception functions
     decode_condition = False
     given_string = given_string.encode()
     options = {'1': 'base16', '2': 'base32', '3': 'base64', '4': 'base85'}
@@ -27,7 +26,6 @@ def decode_string(given_string):
             decode_condition = True
             break
         except:
-            worthless_value = ''
             decode_condition = False
         try:
             result = base64.b32decode(given_string)
@@ -35,7 +33,6 @@ def decode_string(given_string):
             decode_condition = True
             break
         except:
-           worthless_value = '' 
            decode_condition = False
         try:
             result = base64.b64decode(given_string)
@@ -43,7 +40,6 @@ def decode_string(given_string):
             decode_condition = True
             break
         except:
-            worthless_value = ''
             decode_condition = False
         try:
             result = base64.a85decode(given_string)
@@ -51,7 +47,6 @@ def decode_string(given_string):
             decode_condition = True
             break
         except:
-            worthless_value = ''
             decode_condition = False
             break
 
