@@ -90,4 +90,4 @@ if '__main__' == __name__:
         elif given_argument in ('-m', '--multiple'):
             main('', True)
     
-    print(f'[!] Program exited without doing anything. Did you use a switch?')
+    help()
