@@ -1,0 +1,1 @@
+import random; results = ['You win!', 'You lose!', 'Draw!']; output_result = random.choice(results); user_choice = input('Enter (R)ock, (P)aper, (S)cissors: '); print(output_result if user_choice.upper() == 'R' else (output_result if user_choice.upper() == 'P' else(output_result if user_choice.upper() == 'S' else 'Error: Incorrect input')))
